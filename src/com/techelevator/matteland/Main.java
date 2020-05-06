@@ -16,6 +16,7 @@ public class Main {
         System.out.println(); // Blank Line
         System.out.println("Loading Word Database...");
         WordProvider words = new WordProvider();
+        words.load();
 
         System.out.println("Analyzing grid...");
         HashSet<String> matches = grid.analyze(words);
