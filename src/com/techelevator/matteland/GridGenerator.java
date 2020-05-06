@@ -9,7 +9,7 @@ public class GridGenerator {
         final int lengthOfAlphabet = 26;
         final int uppercaseLetterOffset = 65; // Where in the ASCII codes the uppercase letters start
 
-        final Random random = new Random(42); // Seed provided for testing purposes
+        final Random random = new Random();
 
         // Randomly set letters in the grid
         for (int y = 0; y < sizeY; y++) {

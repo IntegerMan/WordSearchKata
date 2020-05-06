@@ -16,7 +16,7 @@ public class Main {
         System.out.println(); // Blank Line
         System.out.println("Loading Word Database...");
         WordProvider words = new WordProvider();
-        words.load();
+        words.load("C:\\words.txt"); // TODO: This should not require an absolute path
 
         System.out.println("Analyzing grid...");
         HashSet<String> matches = grid.analyze(words);
@@ -26,9 +26,11 @@ public class Main {
         // Display matching words
         for (String match : matches) {
             System.out.println("Word Match: " + match);
-        } // TODO: Handle no matches
+        }
+
+        System.out.println(); // Blank Line
 
         // Display the grid again, now that we've searched it
-        grid.writeToConsole(); // TODO: Should this take in a parameter indicating that it should show matches?
+        grid.writeToConsole();
     }
 }
