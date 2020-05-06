@@ -3,14 +3,21 @@ package com.techelevator.matteland;
 import java.util.HashSet;
 
 public class WordGrid {
+
+    private final char letters[][];
+
     public WordGrid(int sizeX, int sizeY) {
-        // TODO: Instantiate an internal array
+        letters = new char[sizeY][sizeX];
     }
 
     public void writeToConsole() {
-        System.out.println("Grid should be written to the console here..."); // TODO: This
-
-        // TODO: If we have matches, show them in lower case
+        for (char[] row : letters) {
+            for (char letter : row) {
+                // TODO: If we have matches, show them in lower case
+                System.out.print(letter);
+            }
+            System.out.println(); // Finish the row
+        }
     }
 
     public HashSet<String> analyze(WordProvider words) {
@@ -19,5 +26,9 @@ public class WordGrid {
         // TODO: Actually search it
 
         return matches;
+    }
+
+    public void setCharacter(int x, int y, char value) {
+        letters[y][x] = value;
     }
 }
