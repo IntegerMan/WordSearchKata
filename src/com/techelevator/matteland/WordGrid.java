@@ -7,8 +7,8 @@ public class WordGrid {
 
     private final int sizeX;
     private final int sizeY;
-    private final char letters[][];
-    private final boolean isPartOfWord[][];
+    private final char[][] letters;
+    private final boolean[][] isPartOfWord;
 
     public WordGrid(int sizeX, int sizeY) {
         this.sizeX = sizeX;
